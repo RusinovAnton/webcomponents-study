@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-  <h1>hello</h1>
+
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<style>
+    howto-tab {
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    howto-panel {
+        padding: 20px;
+        background-color: lightgray;
+    }
+
+    howto-tab[selected] {
+        background-color: bisque;
+    }
+
+    /**
+     * If JavaScript does not run, the element will not match `:defined`.
+     * In that case this style adds spacing between tabs and previous panel.
+     */
+    howto-tabs:not(:defined), howto-tab:not(:defined), howto-panel:not(:defined) {
+        display: block;
+    }
+</style>
+
+<howto-tabs>
+    <howto-tab role="heading" slot="tab">Tab 1</howto-tab>
+    <howto-panel role="region" slot="panel">Content 1</howto-panel>
+    <howto-tab role="heading" slot="tab">Tab 2</howto-tab>
+    <howto-panel role="region" slot="panel">Content 2</howto-panel>
+    <howto-tab role="heading" slot="tab">Tab 3</howto-tab>
+    <howto-panel role="region" slot="panel">Content 3</howto-panel>
+</howto-tabs>
+
+
+<script src="webcomponents-hi-sd-ce.js"></script>
+<script src="howto-tabs.js"></script>
+<!--<script type="module" src="index.js"></script>-->
 </body>
 </html>

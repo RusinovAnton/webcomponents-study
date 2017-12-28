@@ -10,6 +10,7 @@
   "author": "Rusinov Anton <rusinovantondev@gmail.com> (https://rusinovanton.github.io/personal-website/)",
   "license": "MIT",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.22",
     "pushstate-server": "^3.0.1"
   }
 }
